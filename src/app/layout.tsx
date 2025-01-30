@@ -2,7 +2,7 @@ import "@/styles/global.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-export const inter = Inter({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-(--background) ${inter.className}`}>{children}</body>
+      <body className={`${inter.className} bg-(--background)`}>{children}</body>
     </html>
   );
 }
