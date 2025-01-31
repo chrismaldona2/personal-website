@@ -1,24 +1,24 @@
-import WavingHand from "@/components/animations/WavingHand/WavingHand";
+import Hero from "@/components/Hero";
+import MainLayout from "@/components/MainLayout";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Home = () => {
   return (
-    <main className="min-h-screen text-white grid grid-cols-2 gap-8 items-start w-[80%] m-auto py-32">
-      <div className="text-2xl cursor-default flex flex-col gap-1 items-start ">
-        <span className="flex gap-2 items-center">
-          <WavingHand />
-          Hi I&apos;m
-        </span>
-        <h1 className="text-7xl/[100%] font-bold text-white">Christian</h1>
-        <span className="text-neutral-300 ml-1">Full-stack Developer</span>
+    <div className="h-screen pt-32 pb-12 bg-neutral-100 dark:bg-neutral-900">
+      <MainLayout>
+        <Hero />
+        <div>
+          <p className="text-lg sm:text-xl dark:text-neutral-50 text-neutral-800">
+            I’m a computer engineer student with a designer’s heart, obsessed
+            with crafting pixel-perfect interfaces and breathing life into the
+            web through motion.
+          </p>
+        </div>
+      </MainLayout>
+      <div className="fixed top-0 right-0 m-8 shadow-[0px_0px_2rem_#ffcb90] dark:shadow-[0px_0px_2rem_#747992]">
+        <ThemeToggle />
       </div>
-      <div>
-        <p className="text-xl">
-          I’m a computer engineer student with a designer’s heart, obsessed with
-          crafting pixel-perfect interfaces and breathing life into the web
-          through motion.
-        </p>
-      </div>
-    </main>
+    </div>
   );
 };
 

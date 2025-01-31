@@ -1,5 +1,19 @@
-:root {
-  --background: #1f1f1f;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  transition-property: box-shadow, background-color, color, fill;
+  transition-behavior: ease;
+  transition-duration: 0.35s;
 }
 
-@import "tailwindcss";
+::-webkit-scrollbar {
+  width: 8px;
+  height: 9px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-black dark:bg-white rounded-md border-solid border-black;
+}
