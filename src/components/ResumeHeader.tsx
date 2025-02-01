@@ -9,7 +9,7 @@ const ResumeHeader = () => {
           Santa Fe, Argentina
         </span>
       </div>
-      <p className="text-lg md:text-xl dark:text-neutral-300 text-neutral-500">
+      <p className="text-lg md:text-xl dark:text-neutral-300 text-[#929292]">
         I’m a computer engineer student with a designer’s heart, obsessed with
         crafting pixel-perfect interfaces and breathing life into the web
         through motion.

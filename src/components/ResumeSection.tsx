@@ -9,7 +9,7 @@ const ResumeSection = ({
 }) => {
   return (
     <div>
-      <h2 className="text-base font-semibold text-neutral-600 dark:text-neutral-400 uppercase mb-3.5">
+      <h2 className="text-base font-semibold text-neutral-500 dark:text-neutral-400 uppercase mb-3.5">
         {title}
       </h2>
       {children}

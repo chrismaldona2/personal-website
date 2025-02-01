@@ -13,7 +13,7 @@ const Resume = () => {
         <EducationList />
       </ResumeSection>
       <ResumeSection title="Tech Stack">
-        <span className="text-base font-medium text-neutral-600 dark:text-[#bebebe]">
+        <span className="text-base font-medium  text-[#929292] dark:text-[#bebebe]">
           Javascript, TypeScript, React, Next.js, Tailwind CSS, C#, .Net Core,
           Microsoft SQL Server.
         </span>
