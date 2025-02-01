@@ -1,9 +1,9 @@
 import SocialMediaItem from "./SocialMediaItem";
-import { GithubIcon } from "./SocialMediaIcons";
+import { socialMedia } from "@/data/socialMedia";
 
 const SocialMediaList = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-2.5 w-full">
       {socialMedia.map(({ id, icon, link, ariaLabel }) => {
         return (
           <SocialMediaItem
@@ -19,12 +19,3 @@ const SocialMediaList = () => {
 };
 
 export default SocialMediaList;
-
-const socialMedia = [
-  {
-    id: 1,
-    icon: <GithubIcon className="size-[2.5rem]" />,
-    link: "https://github.com/chrismaldona2",
-    ariaLabel: "Go to Github",
-  },
-];

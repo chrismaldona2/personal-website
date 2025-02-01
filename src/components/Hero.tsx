@@ -3,10 +3,12 @@ import SocialMediaList from "./SocialMediaList";
 
 const Hero = () => {
   return (
-    <div className="h-full flex flex-col justify-between max-w-full ">
+    <header className="pt-24 lg:py-24 lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[48%] lg:flex-col lg:justify-between  ">
       <MainInfo />
-      <SocialMediaList />
-    </div>
+      <div className="ml-0.5 mt-24  flex items-center">
+        <SocialMediaList />
+      </div>
+    </header>
   );
 };
 

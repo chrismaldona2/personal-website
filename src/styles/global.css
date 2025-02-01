@@ -5,15 +5,19 @@
 * {
   transition-property: box-shadow, background-color, color, fill;
   transition-behavior: ease;
-  transition-duration: 0.35s;
+  transition-duration: 0.3s;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
   height: 9px;
   background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-black dark:bg-white rounded-md border-solid border-black;
+  @apply bg-neutral-600 dark:bg-slate-50 rounded-md border-solid dark:border-neutral-900 border-slate-50;
+}
+
+::selection {
+  @apply bg-neutral-700 dark:bg-slate-100 text-slate-100 dark:text-neutral-700;
 }
