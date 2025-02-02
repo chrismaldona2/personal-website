@@ -1,9 +1,8 @@
 "use client";
-import { SvgProps } from "@/types";
 import { motion, useAnimate } from "motion/react";
 import { useState } from "react";
 
-const WavingHand = ({ className }: SvgProps) => {
+const WavingHand = ({ size }: { size?: string }) => {
   const [scope, animate] = useAnimate();
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -29,10 +28,11 @@ const WavingHand = ({ className }: SvgProps) => {
       aria-hidden="true"
       role="img"
       preserveAspectRatio="xMidYMid meet"
-      className={className}
+      className={`outline-none cursor-pointer origin-[80%_80%] ${
+        size ? `size-[${size}]` : "size-6"
+      }`}
       onClick={animateWave}
       onHoverStart={animateWave}
-      style={{ cursor: "pointer", transformOrigin: "80% 80%" }}
     >
       <radialGradient
         id="IconifyId17ecdb2904d178eab21437"

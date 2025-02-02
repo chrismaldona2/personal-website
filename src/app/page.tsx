@@ -1,7 +1,7 @@
-import Hero from "@/components/Hero";
-import MainLayout from "@/components/MainLayout";
-import Resume from "@/components/Resume";
-import ThemeToggle from "@/components/ThemeToggle";
+import Hero from "@/components/sections/hero/Hero";
+import MainLayout from "@/components/layout/MainLayout";
+import Resume from "@/components/sections/resume/Resume";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const Home = () => {
   return (

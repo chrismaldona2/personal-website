@@ -1,12 +1,17 @@
-import { ReactElement } from "react";
+import { SocialMedia } from "@/data/socialMedia";
+import { ReactNode } from "react";
 
-interface Props {
-  icon: ReactElement;
-  redirectTo: string;
-  ariaLabel: string;
+interface SocialMediaItemProps {
+  icon: ReactNode;
+  redirectTo: SocialMedia["link"];
+  ariaLabel: SocialMedia["ariaLabel"];
 }
 
-const SocialMediaItem = ({ icon, redirectTo, ariaLabel }: Props) => {
+const SocialMediaItem = ({
+  icon,
+  redirectTo,
+  ariaLabel,
+}: SocialMediaItemProps) => {
   return (
     <a
       href={redirectTo}

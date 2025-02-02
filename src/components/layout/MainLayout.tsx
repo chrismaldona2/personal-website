@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 
-const MainLayout = ({ children }: { children: ReactNode }) => {
+const MainLayout = ({ children }: PropsWithChildren) => {
   return (
     <main className="lg:flex lg:justify-between lg:gap-4">{children}</main>
   );

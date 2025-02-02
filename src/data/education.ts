@@ -8,7 +8,7 @@ export interface EducationItem {
   interval: `${string} - ${string}`;
 }
 
-export const education: EducationItem[] = [
+export const educationList: EducationItem[] = [
   {
     id: 1,
     institution: {

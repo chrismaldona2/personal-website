@@ -2,6 +2,7 @@ import "@/styles/global.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Providers } from "./providers";
+import SmoothScroll from "@/components/layout/SmoothScroll";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,9 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
-      <body className="bg-slate-50 dark:bg-neutral-900">
-        <Providers>{children}</Providers>
-      </body>
+      <SmoothScroll root>
+        <body className="bg-slate-50 dark:bg-neutral-900">
+          <Providers>{children}</Providers>
+        </body>
+      </SmoothScroll>
     </html>
   );
 }
