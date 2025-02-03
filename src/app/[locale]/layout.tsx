@@ -31,11 +31,11 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={inter.className} suppressHydrationWarning>
       <body className="bg-slate-50 dark:bg-neutral-900">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Providers>
+        <Providers>
+          <NextIntlClientProvider locale={locale} messages={messages}>
             <SmoothScroll root>{children}</SmoothScroll>
-          </Providers>
-        </NextIntlClientProvider>
+          </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );
