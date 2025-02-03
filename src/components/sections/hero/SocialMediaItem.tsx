@@ -1,4 +1,5 @@
 import { SocialMedia } from "@/data/socialMedia";
+import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
 
 interface SocialMediaItemProps {
@@ -12,10 +13,11 @@ const SocialMediaItem = ({
   redirectTo,
   ariaLabel,
 }: SocialMediaItemProps) => {
+  const t = useTranslations();
   return (
     <a
       href={redirectTo}
-      aria-label={ariaLabel}
+      aria-label={t(ariaLabel)}
       className="flex justify-center items-center
                   max-w-fit p-2
                   rounded-lg border border-solid border-neutral-500 cursor-pointer

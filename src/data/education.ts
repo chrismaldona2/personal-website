@@ -5,26 +5,26 @@ export interface EducationItem {
     link?: string;
   };
   carrer: string;
-  interval: `${string} - ${string}`;
+  interval: string;
 }
 
 export const educationList: EducationItem[] = [
   {
     id: 1,
     institution: {
-      name: "UCSE Catholic University of Santiago del Estero",
+      name: "home.education.ucse.name",
       link: "https://www.ucse.edu.ar/",
     },
-    carrer: "Computer Engineering",
-    interval: "2025 - Now",
+    carrer: "home.education.computerEngineering",
+    interval: "home.education.ucse.interval",
   },
   {
     id: 2,
     institution: {
-      name: "ICES University Center",
+      name: "home.education.ices.name",
       link: "https://www.ices.edu.ar/superior",
     },
-    carrer: "Higher Technician Degree in Software Development",
-    interval: "2022 - 2025",
+    carrer: "home.education.higherTechnician",
+    interval: "home.education.ices.interval",
   },
 ];

@@ -13,12 +13,12 @@ export const socialMediaList: SocialMedia[] = [
     id: 1,
     Icon: GithubIcon,
     link: "https://github.com/chrismaldona2",
-    ariaLabel: "Go to Github profile",
+    ariaLabel: "home.socialMedia.githubAriaLabel",
   },
   {
     id: 2,
     Icon: LinkedinIcon,
     link: "https://linkedin.com/in/chris-ariel-maldonado/",
-    ariaLabel: "Go to LinkedIn profile",
+    ariaLabel: "home.socialMedia.linkedinAriaLabel",
   },
 ];

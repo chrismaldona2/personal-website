@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import ThemeToggle from "@/components/ui/ThemeToggle";
+import { useTranslations } from "next-intl";
 
-const notFound = () => {
+const NotFound = () => {
+  const t = useTranslations("notFound");
   return (
     <div className="min-h-screen min-w-screen flex items-center justify-center">
       <div className="flex flex-col gap-2 text-center">
@@ -10,10 +12,10 @@ const notFound = () => {
           404
         </h1>
         <span className="text-base text-neutral-700 dark:text-neutral-400">
-          Not found
+          {t("description")}
         </span>
-        <Link href="/">
-          <Button>Return to home page</Button>
+        <Link href="/" aria-label={t("returnToHome")}>
+          <Button>{t("returnToHome")}</Button>
         </Link>
       </div>
       <div className="absolute top-0 right-0 my-10 mx-8 lg:mx-16">
@@ -23,4 +25,4 @@ const notFound = () => {
   );
 };
 
-export default notFound;
+export default NotFound;

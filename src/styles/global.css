@@ -5,7 +5,7 @@
 * {
   transition-property: box-shadow, background-color, color, fill;
   transition-behavior: ease;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
 }
 
 ::-webkit-scrollbar {

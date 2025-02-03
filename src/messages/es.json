@@ -1,0 +1,47 @@
+{
+  "shared": {
+    "themeToggle": {
+      "toggleLightLabel": "Cambiar a modo claro",
+      "toggleDarkLabel": "Cambiar a modo oscuro"
+    }
+  },
+  "notFound": {
+    "description": "Página no encontrada",
+    "returnToHome": "Volver a la página de inicio"
+  },
+  "home": {
+    "intro": {
+      "greeting": "Hola, soy",
+      "name": "Christian",
+      "profession": "Desarrollador Full-stack"
+    },
+    "socialMedia": {
+      "githubAriaLabel": "Ir al perfil de Github",
+      "linkedinAriaLabel": "Ir al perfil de LinkedIn"
+    },
+    "about": {
+      "location": "Santa Fe, Argentina",
+      "description": "Estudiante de ingeniería en informática con buen ojo para el diseño, comprometido a construir interfaces escalables e intuitivas mientras le doy vida a la web a través de animaciones."
+    },
+    "education": {
+      "title": "Educación",
+      "ucse": {
+        "name": "Universidad Católica de Santiago del Estero",
+        "interval": "2025 - Actualidad"
+      },
+      "ices": {
+        "name": "ICES Centro Universitario",
+        "interval": "2022 - 2025"
+      },
+      "computerEngineering": "Ingeniería en Informática",
+      "higherTechnician": "Tecnicatura Superior en Desarrollo de Software"
+    },
+    "projects": {
+      "title": "Proyectos"
+    },
+    "techStack": {
+      "title": "Conocimientos",
+      "stack": "Javascript, TypeScript, React, Next.js, Tailwind CSS, C#, .NET Core, Microsoft SQL Server."
+    }
+  }
+}
