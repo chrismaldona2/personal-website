@@ -1,7 +1,6 @@
 import "@/styles/global.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import SmoothScroll from "@/components/layout/SmoothScroll";
 import { Providers } from "../providers";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -30,12 +29,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={inter.className} suppressHydrationWarning>
-      <body className="bg-slate-50 dark:bg-neutral-900">
-        <Providers>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <SmoothScroll root>{children}</SmoothScroll>
-          </NextIntlClientProvider>
-        </Providers>
+      <body className="page-background">
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Providers>{children}</Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

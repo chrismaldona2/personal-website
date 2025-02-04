@@ -59,6 +59,9 @@ const ThemeToggle = () => {
           aria-label={
             theme === "dark" ? t("toggleLightLabel") : t("toggleDarkLabel")
           }
+          title={
+            theme === "dark" ? t("toggleLightLabel") : t("toggleDarkLabel")
+          }
         >
           {theme === "dark" ? (
             <MoonIcon className="size-full rounded-sm" />

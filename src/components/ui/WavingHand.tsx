@@ -1,6 +1,6 @@
 "use client";
 import { motion, useAnimate } from "motion/react";
-import { useRef } from "react";
+import { memo, useRef } from "react";
 
 const WavingHand = ({ size = "24" }: { size?: string }) => {
   const [scope, animate] = useAnimate();
@@ -83,4 +83,4 @@ const WavingHand = ({ size = "24" }: { size?: string }) => {
   );
 };
 
-export default WavingHand;
+export default memo(WavingHand);

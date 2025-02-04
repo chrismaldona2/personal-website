@@ -1,3 +1,4 @@
+import LanguageSelector from "@/components/ui/LanguageSelector";
 import WavingHand from "@/components/ui/WavingHand";
 import { useTranslations } from "next-intl";
 
@@ -20,6 +21,9 @@ const Intro = () => {
           {t("profession")}
         </span>
       </h1>
+      <div className="max-w-[100px] mt-6">
+        <LanguageSelector />
+      </div>
     </section>
   );
 };

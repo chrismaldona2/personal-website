@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  transition-property: box-shadow, background-color, color, fill;
-  transition-behavior: ease;
-  transition-duration: 0.5s;
+.page-background {
+  @apply bg-slate-50;
+}
+
+.dark .page-background {
+  @apply bg-neutral-900;
 }
 
 ::-webkit-scrollbar {

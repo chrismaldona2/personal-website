@@ -3,6 +3,10 @@
     "themeToggle": {
       "toggleLightLabel": "Cambiar a modo claro",
       "toggleDarkLabel": "Cambiar a modo oscuro"
+    },
+    "localeSwitcher": {
+      "ariaLabel": "Cambiar idioma",
+      "locale": "{locale, select, es {Español} en {English} other {Unknown}}"
     }
   },
   "notFound": {

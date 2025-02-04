@@ -1,4 +1,5 @@
 import { LocationIcon } from "@/components/ui/Icons";
+
 import { useTranslations } from "next-intl";
 
 const About = () => {

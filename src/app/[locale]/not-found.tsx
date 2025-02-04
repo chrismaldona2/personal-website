@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Button from "@/components/ui/Button";
-import ThemeToggle from "@/components/ui/ThemeToggle";
 import { useTranslations } from "next-intl";
 
 const NotFound = () => {
@@ -17,9 +16,6 @@ const NotFound = () => {
         <Link href="/" aria-label={t("returnToHome")}>
           <Button>{t("returnToHome")}</Button>
         </Link>
-      </div>
-      <div className="absolute top-0 right-0 my-10 mx-8 lg:mx-16">
-        <ThemeToggle />
       </div>
     </div>
   );
