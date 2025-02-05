@@ -7,6 +7,11 @@
     "localeSwitcher": {
       "ariaLabel": "Cambiar idioma",
       "locale": "{locale, select, es {Español} en {English} other {Unknown}}"
+    },
+    "comboBox": {
+      "ariaLabel": "Selecciona una opción",
+      "defaultPlaceholder": "Selecciona una opción",
+      "noOptionsAvailable": "Ninguna opción disponible"
     }
   },
   "notFound": {

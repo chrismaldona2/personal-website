@@ -33,12 +33,12 @@ const toggleVariants: Variants = {
 
 const ThemeToggle = () => {
   const t = useTranslations("shared.themeToggle");
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
-  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
+  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
   if (!mounted) return null;
 
   return (
@@ -63,7 +63,7 @@ const ThemeToggle = () => {
             theme === "dark" ? t("toggleLightLabel") : t("toggleDarkLabel")
           }
         >
-          {theme === "dark" ? (
+          {resolvedTheme === "dark" ? (
             <MoonIcon className="size-full rounded-sm" />
           ) : (
             <SunIcon className="size-full rounded-sm" />

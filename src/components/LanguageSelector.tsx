@@ -1,6 +1,6 @@
 "use client";
 import { useMemo, useTransition } from "react";
-import Dropdown from "./Dropdown";
+import Dropdown from "@/components/ui/Dropdown";
 import { useLocale, useTranslations } from "next-intl";
 import { routing, Locale, useRouter, usePathname } from "@/i18n/routing";
 import { useParams } from "next/navigation";

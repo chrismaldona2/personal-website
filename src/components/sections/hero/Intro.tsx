@@ -1,4 +1,4 @@
-import LanguageSelector from "@/components/ui/LanguageSelector";
+import LanguageSelector from "@/components/LanguageSelector";
 import WavingHand from "@/components/ui/WavingHand";
 import { useTranslations } from "next-intl";
 
