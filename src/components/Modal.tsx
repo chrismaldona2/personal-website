@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "@/i18n/routing";
+import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import { motion, Variants } from "motion/react";
 
