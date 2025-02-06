@@ -1,6 +1,6 @@
 import Button from "@/components/ui/Button";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
 
 const NotFound = () => {
   const t = useTranslations("notFound");
