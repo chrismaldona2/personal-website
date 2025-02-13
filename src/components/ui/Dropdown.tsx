@@ -1,7 +1,7 @@
 "use client";
 import { AnimatePresence, Variants, motion } from "motion/react";
 import { useState, useCallback, useRef } from "react";
-import { Arrow } from "./Icons";
+import { Arrow } from "./icons";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { useClickOutside } from "@/hooks/useClickOutside";

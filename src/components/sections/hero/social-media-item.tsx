@@ -1,4 +1,4 @@
-import { SocialMedia } from "@/data/socialMedia";
+import { SocialMedia } from "@/data/social-media";
 import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
 

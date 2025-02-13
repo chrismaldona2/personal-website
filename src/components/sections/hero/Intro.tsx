@@ -1,5 +1,5 @@
-import LanguageSelector from "@/components/LanguageSelector";
-import WavingHand from "@/components/ui/WavingHand";
+import LanguageSelector from "@/components/language-selector";
+import WavingHand from "@/components/ui/waving-hand";
 import { useTranslations } from "next-intl";
 
 const Intro = () => {

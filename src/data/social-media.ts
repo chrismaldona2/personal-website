@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/icons";
 import { ComponentType } from "react";
 
 export interface SocialMedia {

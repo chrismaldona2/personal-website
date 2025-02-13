@@ -1,6 +1,6 @@
 "use client";
 import { useMemo, useTransition } from "react";
-import Dropdown from "@/components/ui/Dropdown";
+import Dropdown from "@/components/ui/dropdown";
 import { useLocale, useTranslations } from "next-intl";
 import { locales, Locale } from "@/i18n/config";
 import { setUserLocale } from "@/services/locale";

@@ -1,4 +1,4 @@
-import TitledSection from "@/components/shared/TitledSection";
+import TitledSection from "@/components/shared/titled-section";
 import { useTranslations } from "next-intl";
 
 const TechStack = () => {

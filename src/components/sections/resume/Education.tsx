@@ -1,6 +1,6 @@
 import { educationList } from "@/data/education";
-import EducationItem from "./EducationItem";
-import TitledSection from "@/components/shared/TitledSection";
+import EducationItem from "./education-item";
+import TitledSection from "@/components/shared/titled-section";
 import { useTranslations } from "next-intl";
 
 const Education = () => {

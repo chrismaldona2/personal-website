@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import ProjectItem from "./ProjectItem";
-import TitledSection from "@/components/shared/TitledSection";
+import ProjectItem from "./project-item";
+import TitledSection from "@/components/shared/titled-section";
 
 const Projects = () => {
   const t = useTranslations("home.projects");

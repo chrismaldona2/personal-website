@@ -1,4 +1,4 @@
-import Button from "@/components/ui/Button";
+import Button from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 

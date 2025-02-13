@@ -1,4 +1,4 @@
-import { LocationIcon } from "@/components/ui/Icons";
+import { LocationIcon } from "@/components/ui/icons";
 
 import { useTranslations } from "next-intl";
 

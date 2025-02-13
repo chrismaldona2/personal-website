@@ -1,9 +1,8 @@
 "use client";
-import { useTheme } from "next-themes";
 import { AnimatePresence, motion, Variants } from "motion/react";
-import { useState, useEffect } from "react";
-import { MoonIcon, SunIcon } from "@/components/ui/Icons";
+import { MoonIcon, SunIcon } from "@/components/ui/icons";
 import { useTranslations } from "next-intl";
+import useThemeSwitch from "@/hooks/useThemeSwitch";
 
 const toggleVariants: Variants = {
   hidden: {
@@ -33,12 +32,8 @@ const toggleVariants: Variants = {
 
 const ThemeToggle = () => {
   const t = useTranslations("shared.themeToggle");
-  const { theme, setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { mounted, theme, handleSwitch } = useThemeSwitch();
 
-  useEffect(() => setMounted(true), []);
-
-  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
   if (!mounted) return null;
 
   return (
@@ -51,7 +46,7 @@ const ThemeToggle = () => {
               ? "drop-shadow-[0px_0px_2rem_#8f9fc9]"
               : "drop-shadow-[0px_0px_1rem_#FFC800]"
           }`}
-          onClick={toggleTheme}
+          onClick={handleSwitch}
           variants={toggleVariants}
           initial="hidden"
           animate="visible"
@@ -63,7 +58,7 @@ const ThemeToggle = () => {
             theme === "dark" ? t("toggleLightLabel") : t("toggleDarkLabel")
           }
         >
-          {resolvedTheme === "dark" ? (
+          {theme === "dark" ? (
             <MoonIcon className="size-full rounded-sm" />
           ) : (
             <SunIcon className="size-full rounded-sm" />

@@ -1,5 +1,5 @@
-import SocialMediaItem from "./SocialMediaItem";
-import { socialMediaList } from "@/data/socialMedia";
+import { socialMediaList } from "@/data/social-media";
+import SocialMediaItem from "./social-media-item";
 
 const SocialMedia = () => {
   return (

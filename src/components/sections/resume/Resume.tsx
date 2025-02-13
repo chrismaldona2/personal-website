@@ -1,7 +1,7 @@
-import About from "./About";
-import Education from "./Education";
-import Projects from "./Projects";
-import TechStack from "./TechStack";
+import About from "./about";
+import Education from "./education";
+import Projects from "./projects";
+import TechStack from "./tech-stack";
 
 const Resume = () => {
   return (
