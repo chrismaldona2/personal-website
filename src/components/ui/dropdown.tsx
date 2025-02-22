@@ -4,7 +4,7 @@ import { useState, useCallback, useRef } from "react";
 import { Arrow } from "./icons";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
-import { useClickOutside } from "@/hooks/useClickOutside";
+import { useClickOutside } from "@/hooks/use-click-outside";
 
 export interface Option {
   value: string;

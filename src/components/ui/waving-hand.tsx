@@ -1,22 +1,23 @@
 "use client";
+import { cn } from "@/lib/utils";
 import { motion, useAnimate } from "motion/react";
-import { memo, useRef } from "react";
+import { useRef } from "react";
 
-const WavingHand = ({ size = "24" }: { size?: string }) => {
+const wavingAnimation = {
+  rotate: [0, -16, 0, -16, 0],
+  duration: 0.8,
+  type: "tween",
+  repeat: 0,
+};
+
+const WavingHand = ({ className }: { className?: string }) => {
   const [scope, animate] = useAnimate();
   const isAnimating = useRef<boolean>(false);
 
   const animateWave = async () => {
     if (isAnimating.current) return;
-
     isAnimating.current = true;
-
-    await animate(
-      scope.current,
-      { rotate: [-10, -15, 0, -10, -20, -6, 0] },
-      { duration: 0.8, ease: "easeInOut" }
-    );
-
+    await animate(scope.current, wavingAnimation);
     isAnimating.current = false;
   };
 
@@ -28,9 +29,10 @@ const WavingHand = ({ size = "24" }: { size?: string }) => {
       viewBox="0 0 128 128"
       role="img"
       preserveAspectRatio="xMidYMid meet"
-      className={`outline-none cursor-pointer origin-[80%_80%] ${
-        size ? `size-[${size}]` : "size-6"
-      }`}
+      className={cn(
+        "flex-shrink-0 outline-none cursor-pointer origin-[80%_80%] size-6",
+        className
+      )}
       onClick={animateWave}
       onHoverStart={animateWave}
       whileTap={{ scale: 0.95 }}
@@ -83,4 +85,4 @@ const WavingHand = ({ size = "24" }: { size?: string }) => {
   );
 };
 
-export default memo(WavingHand);
+export default WavingHand;

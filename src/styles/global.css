@@ -2,40 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-.page-background {
-  @apply bg-gradient-to-br from-slate-50 to-slate-100;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-.dark .page-background {
-  @apply bg-gradient-to-br from-neutral-900 to-[#212121];
-}
+  body {
+    @apply bg-gradient-to-br from-slate-50 to-slate-100 dark:from-[#161616] dark:to-[#1f1f1f];
+  }
 
-::-webkit-scrollbar {
-  width: 9px;
-  @apply bg-neutral-300 dark:bg-neutral-800;
-}
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+    @apply bg-neutral-300 dark:bg-neutral-800;
+  }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-neutral-400 dark:bg-neutral-600 rounded-md border-solid dark:border-neutral-800 border-neutral-300;
-}
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neutral-400 dark:bg-neutral-600 rounded-md border-solid dark:border-neutral-800 border-neutral-300;
+  }
 
-::selection {
-  @apply bg-neutral-700 dark:bg-slate-100 text-slate-100 dark:text-neutral-700;
-}
+  ::selection {
+    @apply bg-neutral-700 dark:bg-slate-100 text-slate-100 dark:text-neutral-700;
+  }
 
-html.lenis,
-html.lenis body {
-  height: auto;
-}
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
 
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
 
-.lenis.lenis-stopped {
-  overflow: clip;
-}
+  .lenis.lenis-stopped {
+    overflow: clip;
+  }
 
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
 }

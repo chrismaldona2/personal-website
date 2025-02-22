@@ -10,9 +10,7 @@ const Home = () => {
         <Hero />
         <Resume />
       </MainLayout>
-      <div className="absolute top-0 right-0 my-10 mx-8 lg:mx-16">
-        <ThemeToggle />
-      </div>
+      <ThemeToggle className="absolute top-0 right-0 my-10 mx-8 lg:mx-16" />
     </div>
   );
 };
