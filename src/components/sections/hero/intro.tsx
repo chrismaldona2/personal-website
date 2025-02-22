@@ -8,7 +8,7 @@ const Intro = () => {
   return (
     <section className="cursor-default text-xl">
       <div className="flex gap-2 items-center">
-        <WavingHand size="7" />
+        <WavingHand className="size-7" />
         <span className="dark:text-neutral-50 text-neutral-600">
           {t("greeting")}
         </span>
