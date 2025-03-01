@@ -3,26 +3,42 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --primary: 0 0 12%;
+    --secondary: 0 0 80%;
+    --primary-foreground: 0 0 85%;
+    --secondary-foreground: 0 0 12%;
+  }
+
+  .dark {
+    --primary: 0 0 80%;
+    --secondary: 0 0 12%;
+    --primary-foreground: 0 0 12%;
+    --secondary-foreground: 0 0 85%;
+  }
+}
+
+@layer base {
   html {
     scroll-behavior: smooth;
   }
 
-  body {
-    @apply bg-gradient-to-br from-slate-50 to-slate-100 dark:from-[#161616] dark:to-[#1f1f1f];
+  .page-background {
+    @apply bg-gradient-to-bl from-slate-50 to-slate-100;
   }
 
   ::-webkit-scrollbar {
     width: 9px;
     height: 9px;
-    @apply bg-neutral-300 dark:bg-neutral-800;
+    @apply bg-neutral-300;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-neutral-400 dark:bg-neutral-600 rounded-md border-solid dark:border-neutral-800 border-neutral-300;
+    @apply bg-neutral-400  rounded-md border-solid  border-neutral-300;
   }
 
   ::selection {
-    @apply bg-neutral-700 dark:bg-slate-100 text-slate-100 dark:text-neutral-700;
+    @apply bg-neutral-700  text-slate-100;
   }
 
   html.lenis,

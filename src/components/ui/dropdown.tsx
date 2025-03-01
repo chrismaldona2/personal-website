@@ -38,7 +38,7 @@ const Dropdown = ({
   const toggleMenu = useCallback(() => setIsExpanded((prev) => !prev), []);
   const closeMenu = useCallback(() => setIsExpanded(false), []);
 
-  useClickOutside(dropdownRef, closeMenu);
+  useClickOutside(closeMenu, dropdownRef);
 
   const handleOptionClick = (option: Option) => {
     setSelectedOption(option);
@@ -66,7 +66,7 @@ const Dropdown = ({
           {selectedOption?.label || t("defaultPlaceholder")}
         </span>
         <motion.div
-          className=" h-1.5 [&_path]:fill-[#a4a4a4] dark:[&_path]:fill-[#4b4b4b]"
+          className=" h-1.5 text-[#a4a4a4] dark:text-[#4b4b4b]"
           variants={arrowVariants}
           initial="close"
           animate={isExpanded ? "open" : "close"}

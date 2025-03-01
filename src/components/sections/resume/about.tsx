@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section>
       <div className="flex gap-2 items-center mb-3">
-        <LocationIcon className="size-4 [&_path]:stroke-neutral-500" />
+        <LocationIcon className="size-4 text-neutral-400" />
         <span className="text-neutral-700 dark:text-neutral-400 text-base cursor-default">
           {t("location")}
         </span>

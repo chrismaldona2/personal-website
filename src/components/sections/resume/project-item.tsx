@@ -1,13 +1,70 @@
-import React from "react";
+import Image from "next/image";
+import { StaticImageData } from "next/image";
 
-const ProjectItem = () => {
+interface ProjectItemProps {
+  name: string;
+  screenshot: {
+    defaultImage: StaticImageData;
+    lightModeImage?: StaticImageData;
+    darkModeImage?: StaticImageData;
+  };
+  link: string;
+}
+
+const ProjectItem = ({ name, screenshot, link }: ProjectItemProps) => {
+  const { defaultImage, lightModeImage, darkModeImage } = screenshot;
+
   return (
     <div
-      className="aspect-video bg-neutral-200 dark:bg-neutral-800 rounded-md cursor-pointer 
-  shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]
-  dark:shadow-[rgba(100,_100,_155,_0.15)_0px_2px_5px_0px,_rgba(20,_20,_20,_0.1)_0px_1px_1px_0px]
-  "
-    ></div>
+      className="flex flex-col gap-4 bg-gradient-to-b from-[#e7e7ea] to-[#efeff1] dark:from-[#181818] dark:to-[#141414] rounded-xl p-[1rem_0.825rem]
+shadow-sm shadow-black/30 dark:shadow-neutral-200/10"
+    >
+      <div className="relative aspect-[16/8] bg-neutral-300 dark:bg-[#1b1b1b] rounded-lg overflow-hidden z-10 shadow-sm">
+        {darkModeImage && lightModeImage ? (
+          <>
+            <Image
+              src={darkModeImage.src}
+              alt={`${name} dark mode screenshot`}
+              className="w-full h-full object-cover object-top hidden dark:block"
+              placeholder={darkModeImage.blurDataURL ? "blur" : undefined}
+              blurDataURL={darkModeImage.blurDataURL}
+              width={darkModeImage.width}
+              height={darkModeImage.height}
+              priority
+            />
+            <Image
+              src={lightModeImage.src}
+              alt={`${name} light mode screenshot`}
+              className="w-full h-full object-cover object-top block dark:hidden"
+              placeholder={lightModeImage.blurDataURL ? "blur" : undefined}
+              blurDataURL={lightModeImage.blurDataURL}
+              width={lightModeImage.width}
+              height={lightModeImage.height}
+              priority
+            />
+          </>
+        ) : (
+          <Image
+            src={defaultImage?.src}
+            alt={`${name} screenshot`}
+            className="w-full h-full object-cover object-top block dark:hidden"
+            placeholder={defaultImage.blurDataURL ? "blur" : undefined}
+            blurDataURL={defaultImage.blurDataURL}
+            width={defaultImage.width}
+            height={defaultImage.height}
+          />
+        )}
+      </div>
+      <a
+        href={link}
+        target="_blank"
+        className="p-3 text-center font-semibold 
+          bg-gradient-to-b from-slate-50 to-slate-100 dark:from-[#212122] dark:to-[#191919]
+          text-zinc-400 dark:text-[#b4b4b7] rounded-lg shadow-md"
+      >
+        Visit
+      </a>
+    </div>
   );
 };
 

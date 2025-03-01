@@ -2,13 +2,24 @@ import { useTranslations } from "next-intl";
 import ProjectItem from "./project-item";
 import TitledSection from "@/components/shared/titled-section";
 
+import MayaDarkModeScreenshot from "@/../public/screenshots/maya-ui/dark.webp";
+import MayaLightModeScreenshot from "@/../public/screenshots/maya-ui/light.webp";
+
 const Projects = () => {
   const t = useTranslations("home.projects");
   return (
     <TitledSection title={t("title")}>
       <ul className="flex flex-col gap-6">
         <li>
-          <ProjectItem />
+          <ProjectItem
+            name="Maya UI"
+            link="https://maya-ui-psi.vercel.app/"
+            screenshot={{
+              defaultImage: MayaDarkModeScreenshot,
+              darkModeImage: MayaDarkModeScreenshot,
+              lightModeImage: MayaLightModeScreenshot,
+            }}
+          />
         </li>
       </ul>
     </TitledSection>

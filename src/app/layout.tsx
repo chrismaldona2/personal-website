@@ -27,7 +27,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={inter.className} suppressHydrationWarning>
-      <body className="page-background">
+      <body className="page-background antialiased">
         <NextIntlClientProvider messages={messages}>
           <Providers>{children}</Providers>
         </NextIntlClientProvider>

@@ -1,3 +1,4 @@
+// detects clicks outside a specified element
 "use client";
 import { RefObject, useEffect } from "react";
 

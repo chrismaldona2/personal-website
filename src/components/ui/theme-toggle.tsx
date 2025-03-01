@@ -1,81 +1,67 @@
 "use client";
-import { AnimatePresence, motion, Variants } from "motion/react";
-import { useTranslations } from "next-intl";
+import useTheme from "@/hooks/use-theme";
 import { cn } from "@/lib/utils";
-import useThemeSwitch from "@/hooks/use-theme-switch";
-import { SvgIcon } from "./icons";
+import { HTMLAttributes, MouseEvent, useState } from "react";
 
-const toggleVariants: Variants = {
-  hidden: {
-    scale: 0,
-    opacity: 0,
-    rotate: 90,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    rotate: 0,
-    transition: {
-      type: "spring",
-      stiffness: 260,
-      damping: 20,
-    },
-  },
-  exit: {
-    scale: 0,
-    opacity: 0,
-    rotate: -90,
-    transition: {
-      duration: 0.2,
-    },
-  },
+const shadow = {
+  dark: "drop-shadow-[0px_0px_1.35rem_rgba(143,_159,_201,_1)]",
+  light: "drop-shadow-[0px_0px_.8rem_rgba(255,_200,_0,_1)]",
 };
 
-const RotatingThemeToggle = ({ className }: { className?: string }) => {
-  const { mounted, resolvedTheme, handleSwitch } = useThemeSwitch();
-  const t = useTranslations("shared.themeToggle");
-
-  if (!mounted) return;
-
-  const shadow =
-    resolvedTheme === "dark"
-      ? "drop-shadow-[0px_0px_1.35rem_rgba(143,_159,_201,_1)]"
-      : "drop-shadow-[0px_0px_.8rem_rgba(255,_200,_0,_1)]";
+const RotatingThemeToggle = ({
+  className,
+  onClick,
+  ...props
+}: HTMLAttributes<HTMLButtonElement>) => {
+  const { mounted, resolvedTheme, handleSwitch } = useTheme();
+  const [isExiting, setIsExiting] = useState(false);
+  if (!mounted) return null;
 
   const ariaLabel =
-    resolvedTheme === "dark" ? t("toggleLightLabel") : t("toggleDarkLabel");
+    props["aria-label"] ??
+    (resolvedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
+    if (!isExiting) {
+      setIsExiting(true);
+      onClick?.(event);
+    }
+  };
+
+  const handleAnimationEnd = () => {
+    if (isExiting) {
+      handleSwitch();
+      setIsExiting(false);
+    }
+  };
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.button
-        key={resolvedTheme}
-        style={{ willChange: "transform, opacity" }}
-        className={cn(
-          "size-7 appearance-none cursor-pointer rounded-sm overflow-clip",
-          shadow,
-          className
-        )}
-        onClick={handleSwitch}
-        variants={toggleVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        aria-label={ariaLabel}
-        title={ariaLabel}
-      >
-        {resolvedTheme === "dark" ? (
-          <MoonIcon className="size-full" />
-        ) : (
-          <SunIcon className="size-full" />
-        )}
-      </motion.button>
-    </AnimatePresence>
+    <button
+      {...props}
+      className={cn(
+        "size-6 appearance-none cursor-pointer rounded-sm overflow-clip",
+        resolvedTheme === "dark" ? shadow.dark : shadow.light,
+        isExiting ? "animate-rotate-out" : "animate-rotate-in",
+        className
+      )}
+      onClick={handleClick}
+      onAnimationEnd={handleAnimationEnd}
+      aria-label={ariaLabel}
+      role={props.role ?? "switch"}
+      aria-checked={resolvedTheme === "light"}
+    >
+      {resolvedTheme === "dark" ? (
+        <MoonIcon className="size-full" />
+      ) : (
+        <SunIcon className="size-full" />
+      )}
+    </button>
   );
 };
 
 export default RotatingThemeToggle;
 
-const SunIcon = (props: SvgIcon) => {
+const SunIcon = (props: React.HTMLAttributes<SVGElement>) => {
   return (
     <svg
       width="24"
@@ -92,7 +78,7 @@ const SunIcon = (props: SvgIcon) => {
   );
 };
 
-const MoonIcon = (props: SvgIcon) => {
+const MoonIcon = (props: React.HTMLAttributes<SVGElement>) => {
   return (
     <svg
       width="24"

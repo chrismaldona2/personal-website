@@ -51,7 +51,7 @@
     },
     "techStack": {
       "title": "Tech stack",
-      "stack": "Javascript, TypeScript, React, Next.js, Tailwind CSS, C#, .NET Core, Microsoft SQL Server."
+      "stack": "Javascript, TypeScript, React, Next.js, Tailwind CSS, Git, C#, .NET Core, Microsoft SQL Server."
     }
   }
 }

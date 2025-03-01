@@ -9,7 +9,7 @@ const TitledSection = ({
 }) => {
   return (
     <section>
-      <h2 className="text-base font-semibold text-neutral-500 dark:text-neutral-400 uppercase mb-3.5 cursor-default">
+      <h2 className="text-base font-semibold text-neutral-500 dark:text-neutral-450 uppercase mb-3.5 cursor-default">
         {title}
       </h2>
       {children}

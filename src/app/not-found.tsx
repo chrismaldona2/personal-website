@@ -13,7 +13,7 @@ const NotFound = () => {
         <span className="text-base text-neutral-700 dark:text-neutral-400">
           {t("description")}
         </span>
-        <Link href="/" aria-label={t("returnToHome")}>
+        <Link href="/" aria-label={t("returnToHome")} className="mt-2">
           <Button>{t("returnToHome")}</Button>
         </Link>
       </div>

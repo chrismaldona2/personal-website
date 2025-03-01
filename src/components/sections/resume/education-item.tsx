@@ -17,7 +17,7 @@ const EducationItem = ({
         <span className="text-neutral-400 cursor-default">{t(interval)}</span>
       </div>
       <a
-        className="text-[.95rem] text-neutral-400 dark:text-[rgb(131,_131,_131)] w-fit"
+        className="text-[.95rem] text-neutral-400 dark:text-[#838383] w-fit"
         href={institution.link}
         target="_blank"
       >

@@ -21,8 +21,8 @@ const SocialMediaItem = ({
       className="flex justify-center items-center
                   max-w-fit p-2
                   rounded-lg border border-solid border-neutral-500 cursor-pointer
-                  transition duration-300 ease-in focus:scale-96  hover:scale-105
-                  dark:[&_path]:fill-neutral-50 [&_path]:fill-neutral-800            
+                  transition-transform duration-300 ease-in focus:scale-96  hover:scale-105
+                  dark:text-neutral-50 text-neutral-800            
                   "
       rel="noopener noreferrer"
       target="_blank"

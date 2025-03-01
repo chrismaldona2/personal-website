@@ -30,7 +30,7 @@
     },
     "about": {
       "location": "Santa Fe, Argentina",
-      "description": "Estudiante de ingeniería en informática, dedicado a crear interfaces robustas y escalables, enfocándome en mejorar la experiencia del usuario con atención minuciosa al detalle y animaciones diseñadas con propósito."
+      "description": "Estudiante de ingeniería en informática, dedicado a crear interfaces robustas y escalables, enfocándome en mejorar la experiencia del usuario con gran atención al detalle y animaciones diseñadas con propósito."
     },
     "education": {
       "title": "Educación",
@@ -50,7 +50,7 @@
     },
     "techStack": {
       "title": "Conocimientos",
-      "stack": "Javascript, TypeScript, React, Next.js, Tailwind CSS, C#, .NET Core, Microsoft SQL Server."
+      "stack": "Javascript, TypeScript, React, Next.js, Tailwind CSS, Git, C#, .NET Core, Microsoft SQL Server."
     }
   }
 }
