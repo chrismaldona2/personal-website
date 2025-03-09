@@ -1,9 +1,5 @@
 {
   "shared": {
-    "themeToggle": {
-      "toggleLightLabel": "Switch to light mode",
-      "toggleDarkLabel": "Switch to dark mode"
-    },
     "localeSwitcher": {
       "ariaLabel": "Change language",
       "locale": "{locale, select, es {Español} en {English} other {Unknown}}"
@@ -22,7 +18,7 @@
     "intro": {
       "greeting": "Hi, I'm",
       "name": "Christian",
-      "profession": "Full-stack Developer"
+      "profession": "Front-end Developer"
     },
     "socialMedia": {
       "githubAriaLabel": "Go to Github profile",
@@ -47,7 +43,8 @@
     },
 
     "projects": {
-      "title": "Projects"
+      "title": "Projects",
+      "cta": "Visit"
     },
     "techStack": {
       "title": "Tech stack",

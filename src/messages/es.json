@@ -1,9 +1,5 @@
 {
   "shared": {
-    "themeToggle": {
-      "toggleLightLabel": "Cambiar a modo claro",
-      "toggleDarkLabel": "Cambiar a modo oscuro"
-    },
     "localeSwitcher": {
       "ariaLabel": "Cambiar idioma",
       "locale": "{locale, select, es {Español} en {English} other {Unknown}}"
@@ -22,7 +18,7 @@
     "intro": {
       "greeting": "Hola, soy",
       "name": "Christian",
-      "profession": "Desarrollador Full-stack"
+      "profession": "Desarrollador Front-end"
     },
     "socialMedia": {
       "githubAriaLabel": "Ir al perfil de Github",
@@ -46,7 +42,8 @@
       "higherTechnician": "Tecnicatura Superior en Desarrollo de Software"
     },
     "projects": {
-      "title": "Proyectos"
+      "title": "Proyectos",
+      "cta": "Visitar"
     },
     "techStack": {
       "title": "Conocimientos",

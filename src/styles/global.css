@@ -24,7 +24,7 @@
   }
 
   .page-background {
-    @apply bg-gradient-to-bl from-slate-50 to-slate-100;
+    @apply bg-slate-50;
   }
 
   ::-webkit-scrollbar {
