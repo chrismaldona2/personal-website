@@ -51,7 +51,7 @@ const Dropdown = ({
       <button
         onClick={toggleMenu}
         className={cn(
-          "page-background w-full py-2 px-3 shadow-[inset_0_0_0_1px_#bababa] dark:shadow-[inset_0_0_0_1px_#4b4b4b] rounded-[4px] flex justify-between items-center",
+          "cursor-pointer page-background w-full py-2 px-3 shadow-[inset_0_0_0_1px_#bababa] dark:shadow-[inset_0_0_0_1px_#4b4b4b] rounded-[4px] flex justify-between items-center",
           isChangePending && "opacity-70"
         )}
         title={tooltipLabel}

@@ -4,7 +4,7 @@ import Resume from "@/components/sections/resume/resume";
 
 const Home = () => {
   return (
-    <div className="mx-auto min-h-screen max-w-screen-xl px-6 sm:px-10 py-12 lg:py-0 overflow-clip">
+    <div className="mx-auto min-h-screen max-w-(--breakpoint-xl) px-6 sm:px-10 py-12 lg:py-0 overflow-clip">
       <MainLayout>
         <Hero />
         <Resume />

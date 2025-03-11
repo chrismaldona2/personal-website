@@ -20,7 +20,7 @@ const overlayVariants = cva(
   {
     variants: {
       effect: {
-        blur: "backdrop-blur",
+        blur: "backdrop-blur-sm",
         none: "",
       },
       opacity: {
@@ -31,7 +31,7 @@ const overlayVariants = cva(
       },
     },
     defaultVariants: {
-      effect: "blur",
+      effect: "blur-sm",
       opacity: "default",
     },
   }
@@ -97,7 +97,7 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   size?: "sm" | "md" | "lg" | "full";
-  overlayEffect?: "blur" | "none";
+  overlayEffect?: "blur-sm" | "none";
   overlayOpacity?: "default" | "light" | "dark" | "none";
   contentTheme?: "light" | "dark" | "auto";
   children: ReactNode;

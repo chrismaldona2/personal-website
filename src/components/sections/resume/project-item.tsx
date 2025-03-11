@@ -15,10 +15,10 @@ const ProjectItem = ({ name, screenshot, link }: ProjectItemProps) => {
 
   return (
     <div
-      className="flex flex-col gap-4 bg-gradient-to-b from-[#eaeaec] to-[#efeff3] dark:from-[#181818] dark:to-[#141414] rounded-xl p-[1rem_0.825rem]
+      className="flex flex-col gap-4 bg-linear-to-b from-[#eaeaec] to-[#efeff3] dark:from-[#181818] dark:to-[#141414] rounded-xl p-[1rem_0.825rem]
 shadow-sm shadow-black/30 dark:shadow-neutral-200/10"
     >
-      <div className="relative aspect-[16/8] bg-neutral-300 dark:bg-[#1b1b1b] rounded-lg overflow-hidden z-10 shadow-sm">
+      <div className="relative aspect-16/8 bg-neutral-300 dark:bg-[#1b1b1b] rounded-lg overflow-hidden z-10 shadow-xs">
         <Image
           src={screenshot.src}
           alt={`${name} screenshot`}
@@ -32,7 +32,7 @@ shadow-sm shadow-black/30 dark:shadow-neutral-200/10"
         href={link}
         target="_blank"
         className="p-3 text-center font-semibold 
-          bg-gradient-to-b from-slate-50 to-slate-100 dark:from-[#212122] dark:to-[#191919]
+          bg-linear-to-b from-slate-50 to-slate-100 dark:from-[#212122] dark:to-[#191919]
           text-zinc-400 dark:text-[#b4b4b7] rounded-lg shadow-md"
       >
         {t("cta")}
